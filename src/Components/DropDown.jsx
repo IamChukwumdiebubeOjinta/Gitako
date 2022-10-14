@@ -11,7 +11,7 @@ const links = [
 
 function MyMenu({ header }) {
   return (
-    <Menu as="div" className="relative inline-block">
+    <Menu as="div" className="relative inline-block z-20">
       <Menu.Button className="bg-[#D9D9D9] py-[6.5px] inline-flex items-center justify-center rounded-md bg-opacity-20 px-4 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
         <h3 className="text-[12px] leading-[15px] font-bold">{header}</h3>
         <ChevronDownIcon
