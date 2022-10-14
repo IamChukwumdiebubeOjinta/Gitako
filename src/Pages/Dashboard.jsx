@@ -1,5 +1,4 @@
 import React from "react";
-import { PopOver } from "../Components";
 import MyMenu from "../Components/DropDown";
 import { statsTop } from "../Constants/Index";
 import HomeLayout from "../Layouts/HomeLayout";
@@ -13,15 +12,17 @@ const TopCard = ({ id, title, content }) => (
   </div>
 );
 
-const SideCard = ({ id, title, content }) => (
-  <div id={id} className="card flex-[33.33%] w-96 bg-[#87D087] shadow-sm">
-    <div className="card-body justify-center text-black">
-      <p className="text-center text-base">{title}</p>
-      <h2 className="text-center text-4xl font-bold">{content}</h2>
+const SideCard = ({ id, day, duration, content, bgColor }) => (
+  <div id={id} className="card flex-row flex-1 p-3 w-96 bg-[#D9D9D9] shadow-sm">
+    <div
+      className="flex flex-col px-[1.25rem] items-center justify-center text-white rounded-[6px]"
+      style={{ backgroundColor: bgColor }}
+    >
+      <h2 className="text-center flex-[0.2] text-4xl font-bold">{day}</h2>
+      <p className="text-center text-base">{duration}</p>
     </div>
-    <div className="card-body justify-center text-black">
-      <p className="text-center text-base">{title}</p>
-      <h2 className="text-center text-4xl font-bold">{content}</h2>
+    <div className="card-body justify-center   text-black">
+      <h2 className="text-[12px] font-bold">{content}</h2>
     </div>
   </div>
 );
@@ -29,7 +30,7 @@ const SideCard = ({ id, title, content }) => (
 const Dashboard = () => {
   return (
     <HomeLayout>
-      <div className="flex flex-col md:flex-row justify-center items-center flex-[100%] gap-[13px] mb-[33px]">
+      <div className="flex flex-col md:flex-row gap-[13px] justify-center items-center flex-[100%] mb-[33px]">
         {statsTop.map((stats) => (
           <TopCard
             id={stats.id}
@@ -43,16 +44,34 @@ const Dashboard = () => {
       {/* Current Tasks and Stats */}
       <div className="flex flex-col md:flex-row flex-[100%] gap-[13px] mb-[20px] min-h-[370px]">
         <div className="flex gap-[13px] flex-col">
-          <div className="flex gap-[39px]">
+          <div className="flex justify-between">
             <h2 className="text-center text-[26px] leading-[31px] font-bold">
               Current Tasks
             </h2>
-            <MyMenu
-              header={'See more'} />
+            <MyMenu header={"See more"} />
           </div>
           {/* Side Boxes */}
           <div className="flex flex-col gap-[12px]">
-
+            <SideCard
+              bgColor={`#DE6060`}
+              day="2D"
+              duration="due"
+              content="Fertilizer application not applied at 
+              due date. "
+            />
+            <SideCard
+              bgColor={`#256525`}
+              day="3D"
+              duration="left"
+              content="Weeding to be done in a few days. 
+            Please get set for it"
+            />
+            <SideCard
+              bgColor={`#256525`}
+              day="5D"
+              duration="left"
+              content="Spray of pesticides due in 5 days."
+            />
           </div>
         </div>
         <div className="flex flex-grow"></div>
