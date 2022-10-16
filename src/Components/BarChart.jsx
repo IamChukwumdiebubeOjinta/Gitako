@@ -1,12 +1,10 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-// import { Chart as ChartJS } from "chart.js/auto";
+import { Chart, BarElement } from "chart.js";
+Chart.register(BarElement)
 
 const BarChart = ({ chartData }) => {
-  // return <Bar data={chartData} />;
-  return <>
-    This is the BarChart
-  </>
+  return <Bar data={chartData} />;
 };
 
 export default BarChart;

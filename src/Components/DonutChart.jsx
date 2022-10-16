@@ -8,8 +8,8 @@ const DonutChart = (props) => {
     <>
       <Doughnut
       data={props.data}
-        height={200}
-        width={200}
+        height={props.height}
+        width={props.width}
         options={{
           maintainAspectRatio: false,
         }} />
