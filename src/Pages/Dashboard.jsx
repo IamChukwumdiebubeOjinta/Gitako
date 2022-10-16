@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { BarChart, DonutChart } from "../Components";
 import MyMenu from "../Components/DropDown";
-import { statsTop } from "../Constants/Index";
+import { statsTop, dummyData } from "../Constants/Index";
 import HomeLayout from "../Layouts/HomeLayout";
 
 const TopCard = ({ id, title, content }) => (
@@ -28,6 +29,13 @@ const SideCard = ({ id, day, duration, content, bgColor }) => (
 );
 
 const Dashboard = () => {
+  const [userData, setUserData] = useState({
+    labels: dummyData.map((data) => data.year),
+    datasets: [{
+      label: 'User Gained',
+      data: dummyData.map((data) => data.userGain)
+    }]
+  })
   return (
     <HomeLayout>
       <div className="flex flex-col md:flex-row gap-[13px] justify-center items-center flex-[100%] mb-[33px]">
@@ -85,12 +93,15 @@ const Dashboard = () => {
                 </div>
                 {/* Chart JS */}
                 <div className="flex-[0.8]">
-
+                {/* <BarChart chartData={userData} /> */}
+                <DonutChart />
                 </div>
               </div>
             </div>
             <div className="flex flex-[0.4]">
-              <div className="w-full"></div>
+              <div className="w-full">
+                This TEXT
+              </div>
             </div>
           </div>
         </div>
