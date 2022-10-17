@@ -40,16 +40,16 @@ const Dashboard = () => {
       },
     ],
   });
-  // const [bar, setBar] = useState({
-  //   labels: barData.map((data) => data.month),
-  //   datasets: [
-  //     {
-  //       label: "Production Chart",
-  //       data: barData.map((data) => data.statusBar),
-  //       backgroundColor: "#2976C3"
-  //     }
-  //   ]
-  // })
+  const [bar, setBar] = useState({
+    labels: barData.map((data) => data.month),
+    datasets: [
+      {
+        label: "Production Chart",
+        data: barData.map((data) => data.statusBar),
+        backgroundColor: "#2976C3"
+      }
+    ]
+  })
   return (
     <HomeLayout>
       <div className="flex flex-col md:flex-row gap-[13px] justify-center items-center flex-[100%] mb-[33px]">
@@ -144,10 +144,9 @@ const Dashboard = () => {
       {/* Bar Chart */}
       <div className="flex flex-col">
         <h1 className="text-[26px] font-bold leading-[31px]">Production Chart</h1>
-        {/* <BarChart
-          chartData={bar} /> */}
         <div className="flex justify-center items-center">
-          This was meant to be the bar chart ...Coming Soon
+        <BarChart
+          chartData={bar} />
         </div>
       </div>
     </HomeLayout>
