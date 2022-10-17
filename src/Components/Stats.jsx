@@ -1,12 +1,12 @@
-import React from 'react'
-import Dashboard from '../Pages/Dashboard'
+import React from "react";
+import Dashboard from "../Pages/Dashboard";
 
 const Stats = () => {
   return (
-    <Dashboard>
-      
-    </Dashboard>
-  )
-}
+    <div>
+      <Dashboard></Dashboard>
+    </div>
+  );
+};
 
-export default Stats
+export default Stats;
