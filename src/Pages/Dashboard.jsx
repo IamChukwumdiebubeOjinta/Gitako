@@ -47,8 +47,8 @@ const Dashboard = () => {
         label: "Production Chart",
         data: barData.map((data) => data.statusBar),
         backgroundColor: "#2976C3"
-      }
-    ]
+      },
+    ],
   })
   return (
     <HomeLayout>

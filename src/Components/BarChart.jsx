@@ -8,7 +8,8 @@ Chart.register(LinearScale)
 const BarChart = ({ chartData }) => {
   return <Bar 
     data={chartData}
-    height={50} />;
+    height={50}
+     />;
 };
 
 export default BarChart;

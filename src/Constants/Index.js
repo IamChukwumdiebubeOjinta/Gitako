@@ -204,3 +204,102 @@ export const farmDesignData = [
   },
 ];
 
+export const sideBar = [
+  {
+    id: 1,
+    name: "Dashboard",
+    
+  },
+  {
+    id: 2,
+    name: "Farm Planner",
+    options: [
+      {
+        id: 1,
+        name: "Budget",
+      },
+      {
+        id: 2,
+        name: "Crop Calender",
+      },
+      {
+        id: 3,
+        name: "Farm Design (Blocks)",
+      },
+    ]
+  },
+  {
+    id: 3,
+    name: "Farm Records",
+    options: [
+      {
+        id: 1,
+        name: "Land Clearing",
+      },
+      {
+        id: 2,
+        name: "Land Preparation",
+      },
+      {
+        id: 3,
+        name: "Planting",
+      },
+      {
+        id: 4,
+        name: "Weed Control",
+      },
+      {
+        id: 4,
+        name: "Fertilizer Applications",
+      },
+      {
+        id: 5,
+        name: "Harvesting",
+      },
+      {
+        id: 6,
+        name: "Irrigation",
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: "Farm Inventory",
+    options: [
+      {
+        id: 1,
+        name: "Equipments",
+      },
+      {
+        id: 2,
+        name: "Vehicles",
+      },
+      {
+        id: 3,
+        name: "Inputs",
+      },
+      {
+        id: 4,
+        name: "Produce",
+      },
+    ]
+  },
+  {
+    id: 5,
+    name: "Procurements",
+  },
+  {
+    id: 6,
+    name: "Financial Records",
+    options: [
+      {
+        id: 1,
+        name: "Income",
+      },
+      {
+        id: 2,
+        name: "Expenses",
+      }
+    ]
+  }
+]
